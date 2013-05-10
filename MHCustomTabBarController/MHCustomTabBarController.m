@@ -78,8 +78,10 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
    
-    for (UIButton *button in _buttonView.subviews) {
-        [button setSelected:NO];
+    for (UIView *subview in _buttonView.subviews) {
+        if ([subview isKindOfClass:[UIButton class]]) {
+            [((UIButton *)subview) setSelected:NO];
+        }
     }
         
     UIButton *button = (UIButton *)sender;
