@@ -59,24 +59,18 @@
 }
 
 
-#pragma mark - Forwarding
-
-- (BOOL)shouldAutomaticallyForwardRotationMethods {
-    return YES;
-}
-
-- (BOOL)shouldAutomaticallyForwardAppearanceMethods {
-    return YES;
-}
-
 #pragma mark - Rotation
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     for (UIViewController *vc  in self.childViewControllers) {
         [vc.view setFrame:self.container.bounds];
     }
     
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:
+(UIInterfaceOrientation)interfaceOrientation {
+    return YES;
 }
 
 

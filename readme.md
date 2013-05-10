@@ -2,7 +2,7 @@
 
 ![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/iOS%20Simulator%20Bildschirmfoto%2009.05.2013%2018.24.40.png)
 
-MHCustomTabBarController is a customizable UITabBarController replacement using Storyboard and segues. It's built with Apples Custom Container ViewController API and AutoLayout, so it requires iOS 6+:
+MHCustomTabBarController is a customizable UITabBarController replacement using Storyboard and segues. It's built with Apples Custom Container ViewController API and so requires iOS 5+.
 
 + [MHTabBarController](https://github.com/hollance/MHTabBarController "MHTabBarController") (His initials are also M and H ;)) 
 + [CustomTabBarExample](http://www.scott-sherwood.com/ios-5-creating-a-custom-side-tabbar-using-storyboards-and-custom-segues/ "CustomTabBarExample")
@@ -13,7 +13,7 @@ Have a look at the demoporject and do the following steps.
 
 ### Create your Custom TabBarController
 
-![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/Screenshot%20on%202013-05-09%20at%2017.48.04.png)
+![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/Screenshot%20on%202013-05-09%20at%2017.48.04.png "Create you custom tabbar controller")
 
 Insert a UIViewController into your storyboard and set the class to "MHCustomTabBarController". Place a UIView (your "UITabBar") into the ViewController. Add UIButtons (your "UITabBarItems") to the view (the buttons must IN the UIView). Add a Container View above (or where you want) to the ViewController. 
 
