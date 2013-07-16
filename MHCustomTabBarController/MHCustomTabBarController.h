@@ -24,8 +24,10 @@
 
 @interface MHCustomTabBarController : UIViewController
 
-@property(weak,nonatomic)UIViewController *currentViewController;
-@property (strong, nonatomic) NSString *currentIdentifier;
+@property(weak,nonatomic)UIViewController *destinationViewController;
+@property (strong, nonatomic) NSString *destinationIdentifier;
+@property (strong, nonatomic) NSMutableDictionary *viewControllers;
+@property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (weak, nonatomic) IBOutlet UIView *buttonView;
 

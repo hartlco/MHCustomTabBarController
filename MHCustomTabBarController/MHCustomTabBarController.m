@@ -29,6 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    _viewControllers = [NSMutableDictionary dictionary];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -68,8 +70,7 @@
     
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:
-(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
 }
 
@@ -78,6 +79,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
    
+    _oldViewController = _destinationViewController;
+    
+    //if view controller isn't already contained in the viewControllers-Dictionary
+    if (![[_viewControllers allKeys] containsObject:segue.identifier]) {
+        [_viewControllers setObject:segue.destinationViewController forKey:segue.identifier];
+    }
+    
     for (UIView *subview in _buttonView.subviews) {
         if ([subview isKindOfClass:[UIButton class]]) {
             [((UIButton *)subview) setSelected:NO];
@@ -86,14 +94,14 @@
         
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
-    self.currentIdentifier = segue.identifier;
-    self.currentViewController = segue.destinationViewController;
+    self.destinationIdentifier = segue.identifier;
+    self.destinationViewController = [_viewControllers objectForKey:self.destinationIdentifier];
 
     
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    if ([self.currentIdentifier isEqual:identifier]) {
+    if ([self.destinationIdentifier isEqual:identifier]) {
         //Dont perform segue, if visible ViewController is already the destination ViewController
         return NO;
     }
@@ -105,7 +113,7 @@
 
 - (void)didReceiveMemoryWarning {
     for (UIViewController *vc in self.childViewControllers) {
-        if (![vc isEqual:self.currentViewController]) {
+        if (![vc isEqual:self.destinationViewController]) {
             [vc willMoveToParentViewController:nil];
             [vc removeFromParentViewController];
         }

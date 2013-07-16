@@ -26,15 +26,20 @@
 @implementation MHTabBarSegue
 - (void) perform {
     MHCustomTabBarController *tabBarViewController = (MHCustomTabBarController *)self.sourceViewController;
-    UIViewController *destinationViewController = (UIViewController *) self.destinationViewController;
+    UIViewController *destinationViewController = (UIViewController *) tabBarViewController.destinationViewController;
 
+    //remove old viewController
+    if (tabBarViewController.oldViewController) {
+        [tabBarViewController.oldViewController willMoveToParentViewController:nil];
+        [tabBarViewController.oldViewController.view removeFromSuperview];
+        [tabBarViewController.oldViewController removeFromParentViewController];
+    }
+    
     
     destinationViewController.view.frame = tabBarViewController.container.bounds;
     [tabBarViewController addChildViewController:destinationViewController];
     [tabBarViewController.container addSubview:destinationViewController.view];
     [destinationViewController didMoveToParentViewController:tabBarViewController];
-    
-    tabBarViewController.currentViewController = destinationViewController;
 }
 
 @end
