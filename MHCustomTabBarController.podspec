@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
   s.source = {
     :git => 'https://github.com/mhaddl/MHCustomTabBarController.git',
-    :tag => 'v1.0.2'
+    :tag => 'v1.1.0'
   }
   s.source_files = 'MHCustomTabBarController/*.{m,h}'
 end
