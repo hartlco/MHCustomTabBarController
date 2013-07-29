@@ -112,13 +112,11 @@
 #pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
-    for (UIViewController *vc in self.childViewControllers) {
-        if (![vc isEqual:self.destinationViewController]) {
-            [vc willMoveToParentViewController:nil];
-            [vc removeFromParentViewController];
+    [[self.viewControllers allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
+        if (![self.destinationIdentifier isEqualToString:key]) {
+            [self.viewControllers removeObjectForKey:key];
         }
-    }
-    NSLog(@"amount of children: %d", [self.childViewControllers count]);
+    }];
 }
 
 @end

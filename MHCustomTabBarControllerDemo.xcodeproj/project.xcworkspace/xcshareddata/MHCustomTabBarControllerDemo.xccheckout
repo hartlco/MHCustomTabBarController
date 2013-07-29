@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9F449681-269E-4084-8361-47179D2B6339</string>
+	<string>D380162D-5026-43DA-B652-170E016876B5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MHCustomTabBarControllerDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D098AA73-0DE8-44B1-8E9C-9E4414778B42</key>
-		<string>https://github.com/mhaddl/MHCustomTabBarController.git</string>
+		<key>94C4567E-906B-4B96-B613-B8F66FCFABB7</key>
+		<string>ssh://github.com/mhaddl/MHCustomTabBarController.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MHCustomTabBarControllerDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D098AA73-0DE8-44B1-8E9C-9E4414778B42</key>
+		<key>94C4567E-906B-4B96-B613-B8F66FCFABB7</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mhaddl/MHCustomTabBarController.git</string>
+	<string>ssh://github.com/mhaddl/MHCustomTabBarController.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D098AA73-0DE8-44B1-8E9C-9E4414778B42</string>
+	<string>94C4567E-906B-4B96-B613-B8F66FCFABB7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D098AA73-0DE8-44B1-8E9C-9E4414778B42</string>
+			<string>94C4567E-906B-4B96-B613-B8F66FCFABB7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MHCustomTabBarController</string>
 		</dict>
