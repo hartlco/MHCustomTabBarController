@@ -40,7 +40,13 @@
 
 -(void) viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
     [self.presentingViewController endAppearanceTransition];
+    
+    if (self.childViewControllers.count < 1) {
+        [self performSegueWithIdentifier:@"viewController1" sender:[_buttonView.subviews objectAtIndex:0]];
+    }
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -53,12 +59,6 @@
     [self.presentingViewController endAppearanceTransition];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[_buttonView.subviews objectAtIndex:0]];
-    }
-}
 
 
 #pragma mark - Rotation
@@ -79,11 +79,11 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
    
-    _oldViewController = _destinationViewController;
+    self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![[_viewControllers allKeys] containsObject:segue.identifier]) {
-        [_viewControllers setObject:segue.destinationViewController forKey:segue.identifier];
+    if (![[self.viewControllers allKeys] containsObject:segue.identifier]) {
+        [self.viewControllers setObject:segue.destinationViewController forKey:segue.identifier];
     }
     
     for (UIView *subview in _buttonView.subviews) {
@@ -95,7 +95,7 @@
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
     self.destinationIdentifier = segue.identifier;
-    self.destinationViewController = [_viewControllers objectForKey:self.destinationIdentifier];
+    self.destinationViewController = [self.viewControllers objectForKey:self.destinationIdentifier];
 
     
 }
