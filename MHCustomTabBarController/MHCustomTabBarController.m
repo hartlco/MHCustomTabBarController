@@ -47,7 +47,7 @@
     [self.presentingViewController endAppearanceTransition];
     
     if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[_buttonView.subviews objectAtIndex:0]];
+        [self performSegueWithIdentifier:@"viewController1" sender:[self.buttons objectAtIndex:0]];
     }
 }
 
@@ -88,10 +88,8 @@
         [_viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
     }
     
-    for (UIView *subview in _buttonView.subviews) {
-        if ([subview isKindOfClass:[UIButton class]]) {
-            [((UIButton *)subview) setSelected:NO];
-        }
+    for (UIButton *aButton in self.buttons) {
+        [aButton setSelected:NO];
     }
         
     UIButton *button = (UIButton *)sender;
