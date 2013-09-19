@@ -84,7 +84,7 @@
     self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![[_viewControllersByIdentifier allKeys] containsObject:segue.identifier]) {
+    if (![_viewControllersByIdentifier objectForKey:segue.identifier]) {
         [_viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
     }
     
