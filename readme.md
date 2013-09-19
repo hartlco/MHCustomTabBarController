@@ -2,7 +2,7 @@
 
 ![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/iOS%20Simulator%20Bildschirmfoto%2009.05.2013%2018.24.40.png)
 
-MHCustomTabBarController is a customizable UITabBarController replacement using Storyboard and segues. It's built with Apples Custom Container ViewController API and so requires iOS 5+.
+MHCustomTabBarController is a customizable UITabBarController replacement using Storyboard and segues. It's built with Apples Custom Container ViewController API and so requires iOS 6+.
 
 + [MHTabBarController](https://github.com/hollance/MHTabBarController "MHTabBarController") (His initials are also M and H ;)) 
 + [CustomTabBarExample](http://www.scott-sherwood.com/ios-5-creating-a-custom-side-tabbar-using-storyboards-and-custom-segues/ "CustomTabBarExample")
@@ -23,7 +23,7 @@ Insert a UIViewController into your storyboard and set the class to "MHCustomTab
 Hook up the outlets in MHCustomTabBarController with your created views in the storyboard.
 ```objective-c
 @property (weak, nonatomic) IBOutlet UIView *container;
-@property (weak, nonatomic) IBOutlet UIView *buttonView;
+@property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 ```
 
 ### Create your ContentViewController
