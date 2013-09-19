@@ -1,813 +1,373 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>72854395B7204ECFB9ED468D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Warn for TODO and FIXME comments</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
-FILE_EXTENSIONS="h|m|mm|c|cpp"
-find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EXTENSIONS)$" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
-</string>
-		</dict>
-		<key>C5E8BBE1173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BC10173BA5BC00F2C540</string>
-				<string>C5E8BBF3173BA58C00F2C540</string>
-				<string>C5E8BBEC173BA58C00F2C540</string>
-				<string>C5E8BBEB173BA58C00F2C540</string>
-			</array>
-			<key>indentWidth</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>tabWidth</key>
-			<string>4</string>
-			<key>usesTabs</key>
-			<string>0</string>
-		</dict>
-		<key>C5E8BBE2173BA58C00F2C540</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0460</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Martin Hartl</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C5E8BBE5173BA58C00F2C540</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C5E8BBE1173BA58C00F2C540</string>
-			<key>productRefGroup</key>
-			<string>C5E8BBEB173BA58C00F2C540</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C5E8BBE9173BA58C00F2C540</string>
-			</array>
-		</dict>
-		<key>C5E8BBE5173BA58C00F2C540</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5E8BC0B173BA58D00F2C540</string>
-				<string>C5E8BC0C173BA58D00F2C540</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C5E8BBE6173BA58C00F2C540</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5E8BBFA173BA58C00F2C540</string>
-				<string>C5E8BBFE173BA58C00F2C540</string>
-				<string>C5E8BC15173BA5BC00F2C540</string>
-				<string>C5E8BC16173BA5BC00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5E8BBE7173BA58C00F2C540</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5E8BBEE173BA58C00F2C540</string>
-				<string>C5E8BBF0173BA58C00F2C540</string>
-				<string>C5E8BBF2173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5E8BBE8173BA58C00F2C540</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C5E8BBF8173BA58C00F2C540</string>
-				<string>C5E8BC00173BA58C00F2C540</string>
-				<string>C5E8BC02173BA58C00F2C540</string>
-				<string>C5E8BC04173BA58C00F2C540</string>
-				<string>C5E8BC07173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5E8BBE9173BA58C00F2C540</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C5E8BC0D173BA58D00F2C540</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C5E8BBE6173BA58C00F2C540</string>
-				<string>C5E8BBE7173BA58C00F2C540</string>
-				<string>C5E8BBE8173BA58C00F2C540</string>
-				<string>72854395B7204ECFB9ED468D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MHCustomTabBarControllerDemo</string>
-			<key>productName</key>
-			<string>MHCustomTabBarControllerDemo</string>
-			<key>productReference</key>
-			<string>C5E8BBEA173BA58C00F2C540</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C5E8BBEA173BA58C00F2C540</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MHCustomTabBarControllerDemo.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C5E8BBEB173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BBEA173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBEC173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BBED173BA58C00F2C540</string>
-				<string>C5E8BBEF173BA58C00F2C540</string>
-				<string>C5E8BBF1173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBED173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C5E8BBEE173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBED173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBEF173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C5E8BBF0173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBEF173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBF1173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>C5E8BBF2173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBF1173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBF3173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BBFC173BA58C00F2C540</string>
-				<string>C5E8BBFD173BA58C00F2C540</string>
-				<string>C5E8BC05173BA58C00F2C540</string>
-				<string>C5E8BBF4173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MHCustomTabBarControllerDemo</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBF4173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BBF5173BA58C00F2C540</string>
-				<string>C5E8BBF6173BA58C00F2C540</string>
-				<string>C5E8BBF9173BA58C00F2C540</string>
-				<string>C5E8BBFB173BA58C00F2C540</string>
-				<string>C5E8BBFF173BA58C00F2C540</string>
-				<string>C5E8BC01173BA58C00F2C540</string>
-				<string>C5E8BC03173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBF5173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>MHCustomTabBarControllerDemo-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBF6173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BBF7173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBF7173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBF8173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBF6173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBF9173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBFA173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBF9173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBFB173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MHCustomTabBarControllerDemo-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBFC173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBFD173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BBFE173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBFD173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BBFF173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC00173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BBFF173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BC01173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC02173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BC01173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BC03173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Default-568h@2x.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC04173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BC03173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BC05173BA58C00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BC06173BA58C00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC06173BA58C00F2C540</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/MainStoryboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC07173BA58C00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BC05173BA58C00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BC0B173BA58D00F2C540</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_MISSING_NEWLINE</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_CHECK_SWITCH_STATEMENTS</key>
-				<string>YES</string>
-				<key>GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED</key>
-				<string>YES</string>
-				<key>GCC_WARN_MISSING_PARENTHESES</key>
-				<string>YES</string>
-				<key>GCC_WARN_SHADOW</key>
-				<string>YES</string>
-				<key>GCC_WARN_SIGN_COMPARE</key>
-				<string>YES</string>
-				<key>GCC_WARN_TYPECHECK_CALLS_TO_PRINTF</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_LABEL</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VALUE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>RUN_CLANG_STATIC_ANALYZER</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos6.1</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5E8BC0C173BA58D00F2C540</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_MISSING_NEWLINE</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_CHECK_SWITCH_STATEMENTS</key>
-				<string>YES</string>
-				<key>GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED</key>
-				<string>YES</string>
-				<key>GCC_WARN_MISSING_PARENTHESES</key>
-				<string>YES</string>
-				<key>GCC_WARN_SHADOW</key>
-				<string>YES</string>
-				<key>GCC_WARN_SIGN_COMPARE</key>
-				<string>YES</string>
-				<key>GCC_WARN_TYPECHECK_CALLS_TO_PRINTF</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_LABEL</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VALUE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>RUN_CLANG_STATIC_ANALYZER</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos6.1</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C5E8BC0D173BA58D00F2C540</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C5E8BC0E173BA58D00F2C540</string>
-				<string>C5E8BC0F173BA58D00F2C540</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C5E8BC0E173BA58D00F2C540</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C5E8BC0F173BA58D00F2C540</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C5E8BC10173BA5BC00F2C540</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C5E8BC11173BA5BC00F2C540</string>
-				<string>C5E8BC12173BA5BC00F2C540</string>
-				<string>C5E8BC13173BA5BC00F2C540</string>
-				<string>C5E8BC14173BA5BC00F2C540</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>MHCustomTabBarController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC11173BA5BC00F2C540</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MHCustomTabBarController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC12173BA5BC00F2C540</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MHCustomTabBarController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC13173BA5BC00F2C540</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MHTabBarSegue.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC14173BA5BC00F2C540</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MHTabBarSegue.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C5E8BC15173BA5BC00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BC12173BA5BC00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5E8BC16173BA5BC00F2C540</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E8BC14173BA5BC00F2C540</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C5E8BBE2173BA58C00F2C540</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5E8BBEE173BA58C00F2C540 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBED173BA58C00F2C540 /* UIKit.framework */; };
+		C5E8BBF0173BA58C00F2C540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBEF173BA58C00F2C540 /* Foundation.framework */; };
+		C5E8BBF2173BA58C00F2C540 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBF1173BA58C00F2C540 /* CoreGraphics.framework */; };
+		C5E8BBF8173BA58C00F2C540 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5E8BBF6173BA58C00F2C540 /* InfoPlist.strings */; };
+		C5E8BBFA173BA58C00F2C540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BBF9173BA58C00F2C540 /* main.m */; };
+		C5E8BBFE173BA58C00F2C540 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BBFD173BA58C00F2C540 /* AppDelegate.m */; };
+		C5E8BC00173BA58C00F2C540 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E8BBFF173BA58C00F2C540 /* Default.png */; };
+		C5E8BC02173BA58C00F2C540 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E8BC01173BA58C00F2C540 /* Default@2x.png */; };
+		C5E8BC04173BA58C00F2C540 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5E8BC03173BA58C00F2C540 /* Default-568h@2x.png */; };
+		C5E8BC07173BA58C00F2C540 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E8BC05173BA58C00F2C540 /* MainStoryboard.storyboard */; };
+		C5E8BC15173BA5BC00F2C540 /* MHCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BC12173BA5BC00F2C540 /* MHCustomTabBarController.m */; };
+		C5E8BC16173BA5BC00F2C540 /* MHTabBarSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHCustomTabBarControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5E8BBED173BA58C00F2C540 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C5E8BBEF173BA58C00F2C540 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C5E8BBF1173BA58C00F2C540 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C5E8BBF5173BA58C00F2C540 /* MHCustomTabBarControllerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHCustomTabBarControllerDemo-Info.plist"; sourceTree = "<group>"; };
+		C5E8BBF7173BA58C00F2C540 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5E8BBF9173BA58C00F2C540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5E8BBFB173BA58C00F2C540 /* MHCustomTabBarControllerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHCustomTabBarControllerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C5E8BBFC173BA58C00F2C540 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5E8BBFD173BA58C00F2C540 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5E8BBFF173BA58C00F2C540 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C5E8BC01173BA58C00F2C540 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C5E8BC03173BA58C00F2C540 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C5E8BC06173BA58C00F2C540 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C5E8BC11173BA5BC00F2C540 /* MHCustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCustomTabBarController.h; sourceTree = "<group>"; };
+		C5E8BC12173BA5BC00F2C540 /* MHCustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCustomTabBarController.m; sourceTree = "<group>"; };
+		C5E8BC13173BA5BC00F2C540 /* MHTabBarSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBarSegue.h; sourceTree = "<group>"; };
+		C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBarSegue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5E8BBE7173BA58C00F2C540 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E8BBEE173BA58C00F2C540 /* UIKit.framework in Frameworks */,
+				C5E8BBF0173BA58C00F2C540 /* Foundation.framework in Frameworks */,
+				C5E8BBF2173BA58C00F2C540 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5E8BBE1173BA58C00F2C540 = {
+			isa = PBXGroup;
+			children = (
+				C5E8BC10173BA5BC00F2C540 /* MHCustomTabBarController */,
+				C5E8BBF3173BA58C00F2C540 /* MHCustomTabBarControllerDemo */,
+				C5E8BBEC173BA58C00F2C540 /* Frameworks */,
+				C5E8BBEB173BA58C00F2C540 /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+		};
+		C5E8BBEB173BA58C00F2C540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5E8BBEC173BA58C00F2C540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BBED173BA58C00F2C540 /* UIKit.framework */,
+				C5E8BBEF173BA58C00F2C540 /* Foundation.framework */,
+				C5E8BBF1173BA58C00F2C540 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5E8BBF3173BA58C00F2C540 /* MHCustomTabBarControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BBFC173BA58C00F2C540 /* AppDelegate.h */,
+				C5E8BBFD173BA58C00F2C540 /* AppDelegate.m */,
+				C5E8BC05173BA58C00F2C540 /* MainStoryboard.storyboard */,
+				C5E8BBF4173BA58C00F2C540 /* Supporting Files */,
+			);
+			path = MHCustomTabBarControllerDemo;
+			sourceTree = "<group>";
+		};
+		C5E8BBF4173BA58C00F2C540 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BBF5173BA58C00F2C540 /* MHCustomTabBarControllerDemo-Info.plist */,
+				C5E8BBF6173BA58C00F2C540 /* InfoPlist.strings */,
+				C5E8BBF9173BA58C00F2C540 /* main.m */,
+				C5E8BBFB173BA58C00F2C540 /* MHCustomTabBarControllerDemo-Prefix.pch */,
+				C5E8BBFF173BA58C00F2C540 /* Default.png */,
+				C5E8BC01173BA58C00F2C540 /* Default@2x.png */,
+				C5E8BC03173BA58C00F2C540 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5E8BC10173BA5BC00F2C540 /* MHCustomTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				C5E8BC11173BA5BC00F2C540 /* MHCustomTabBarController.h */,
+				C5E8BC12173BA5BC00F2C540 /* MHCustomTabBarController.m */,
+				C5E8BC13173BA5BC00F2C540 /* MHTabBarSegue.h */,
+				C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */,
+			);
+			path = MHCustomTabBarController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5E8BBE9173BA58C00F2C540 /* MHCustomTabBarControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5E8BC0D173BA58D00F2C540 /* Build configuration list for PBXNativeTarget "MHCustomTabBarControllerDemo" */;
+			buildPhases = (
+				C5E8BBE6173BA58C00F2C540 /* Sources */,
+				C5E8BBE7173BA58C00F2C540 /* Frameworks */,
+				C5E8BBE8173BA58C00F2C540 /* Resources */,
+				72854395B7204ECFB9ED468D /* Warn for TODO and FIXME comments */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MHCustomTabBarControllerDemo;
+			productName = MHCustomTabBarControllerDemo;
+			productReference = C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5E8BBE2173BA58C00F2C540 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Martin Hartl";
+			};
+			buildConfigurationList = C5E8BBE5173BA58C00F2C540 /* Build configuration list for PBXProject "MHCustomTabBarControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C5E8BBE1173BA58C00F2C540;
+			productRefGroup = C5E8BBEB173BA58C00F2C540 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5E8BBE9173BA58C00F2C540 /* MHCustomTabBarControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5E8BBE8173BA58C00F2C540 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E8BBF8173BA58C00F2C540 /* InfoPlist.strings in Resources */,
+				C5E8BC00173BA58C00F2C540 /* Default.png in Resources */,
+				C5E8BC02173BA58C00F2C540 /* Default@2x.png in Resources */,
+				C5E8BC04173BA58C00F2C540 /* Default-568h@2x.png in Resources */,
+				C5E8BC07173BA58C00F2C540 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72854395B7204ECFB9ED468D /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5E8BBE6173BA58C00F2C540 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E8BBFA173BA58C00F2C540 /* main.m in Sources */,
+				C5E8BBFE173BA58C00F2C540 /* AppDelegate.m in Sources */,
+				C5E8BC15173BA5BC00F2C540 /* MHCustomTabBarController.m in Sources */,
+				C5E8BC16173BA5BC00F2C540 /* MHTabBarSegue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C5E8BBF6173BA58C00F2C540 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5E8BBF7173BA58C00F2C540 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C5E8BC05173BA58C00F2C540 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5E8BC06173BA58C00F2C540 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5E8BC0B173BA58D00F2C540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos7.0;
+			};
+			name = Debug;
+		};
+		C5E8BC0C173BA58D00F2C540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos7.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5E8BC0E173BA58D00F2C540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch";
+				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C5E8BC0F173BA58D00F2C540 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch";
+				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5E8BBE5173BA58C00F2C540 /* Build configuration list for PBXProject "MHCustomTabBarControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5E8BC0B173BA58D00F2C540 /* Debug */,
+				C5E8BC0C173BA58D00F2C540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5E8BC0D173BA58D00F2C540 /* Build configuration list for PBXNativeTarget "MHCustomTabBarControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5E8BC0E173BA58D00F2C540 /* Debug */,
+				C5E8BC0F173BA58D00F2C540 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5E8BBE2173BA58C00F2C540 /* Project object */;
+}

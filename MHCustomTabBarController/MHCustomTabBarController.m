@@ -22,64 +22,33 @@
 
 #import "MHCustomTabBarController.h"
 
-@implementation MHCustomTabBarController
-{
+@implementation MHCustomTabBarController {
     NSMutableDictionary *_viewControllersByIdentifier;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     _viewControllersByIdentifier = [NSMutableDictionary dictionary];
 }
 
--(void) viewWillAppear:(BOOL)animated
-{
-    [self.presentingViewController beginAppearanceTransition: YES animated: animated];
-}
-
--(void) viewDidAppear:(BOOL)animated
-{
+-(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self.presentingViewController endAppearanceTransition];
     
     if (self.childViewControllers.count < 1) {
         [self performSegueWithIdentifier:@"viewController1" sender:[self.buttons objectAtIndex:0]];
     }
 }
 
--(void) viewWillDisappear:(BOOL)animated
-{
-    [self.presentingViewController beginAppearanceTransition: NO animated: animated];
-}
-
--(void) viewDidDisappear:(BOOL)animated
-{
-    [self.presentingViewController endAppearanceTransition];
-}
-
-
-
-#pragma mark - Rotation
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    for (UIViewController *vc  in self.childViewControllers) {
-        [vc.view setFrame:self.container.bounds];
-    }
-    
+    self.destinationViewController.view.frame = self.container.bounds;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
-}
 
 
 #pragma mark - Segue
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
     self.oldViewController = self.destinationViewController;
     
