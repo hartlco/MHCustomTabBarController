@@ -26,9 +26,8 @@
 
 @property (weak,nonatomic) UIViewController *destinationViewController;
 @property (strong, nonatomic) NSString *destinationIdentifier;
-@property (strong, nonatomic) NSMutableDictionary *viewControllers;
 @property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
-@property (weak, nonatomic) IBOutlet UIView *buttonView;
+@property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
 @end
