@@ -23,14 +23,16 @@
 #import "MHCustomTabBarController.h"
 
 @implementation MHCustomTabBarController
-
+{
+    NSMutableDictionary *_viewControllersByIdentifier;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _viewControllers = [NSMutableDictionary dictionary];
+    _viewControllersByIdentifier = [NSMutableDictionary dictionary];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -45,7 +47,7 @@
     [self.presentingViewController endAppearanceTransition];
     
     if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[_buttonView.subviews objectAtIndex:0]];
+        [self performSegueWithIdentifier:@"viewController1" sender:[self.buttons objectAtIndex:0]];
     }
 }
 
@@ -82,20 +84,18 @@
     self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![[self.viewControllers allKeys] containsObject:segue.identifier]) {
-        [self.viewControllers setObject:segue.destinationViewController forKey:segue.identifier];
+    if (![_viewControllersByIdentifier objectForKey:segue.identifier]) {
+        [_viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
     }
     
-    for (UIView *subview in _buttonView.subviews) {
-        if ([subview isKindOfClass:[UIButton class]]) {
-            [((UIButton *)subview) setSelected:NO];
-        }
+    for (UIButton *aButton in self.buttons) {
+        [aButton setSelected:NO];
     }
         
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
     self.destinationIdentifier = segue.identifier;
-    self.destinationViewController = [self.viewControllers objectForKey:self.destinationIdentifier];
+    self.destinationViewController = [_viewControllersByIdentifier objectForKey:self.destinationIdentifier];
 
     
 }
@@ -112,9 +112,9 @@
 #pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
-    [[self.viewControllers allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
+    [[_viewControllersByIdentifier allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
         if (![self.destinationIdentifier isEqualToString:key]) {
-            [self.viewControllers removeObjectForKey:key];
+            [_viewControllersByIdentifier removeObjectForKey:key];
         }
     }];
 }
