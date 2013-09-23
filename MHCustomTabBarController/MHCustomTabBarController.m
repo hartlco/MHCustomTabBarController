@@ -22,6 +22,8 @@
 
 #import "MHCustomTabBarController.h"
 
+#import "MHTabBarSegue.h"
+
 @implementation MHCustomTabBarController {
     NSMutableDictionary *_viewControllersByIdentifier;
 }
@@ -50,6 +52,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
+    if ([segue isKindOfClass:[MHTabBarSegue class]] == NO)
+    {
+        [super prepareForSegue:segue sender:sender];
+        return;
+    }
+    
     self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
