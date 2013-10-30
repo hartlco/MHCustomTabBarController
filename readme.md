@@ -26,24 +26,16 @@ Hook up the outlets in MHCustomTabBarController with your created views in the s
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 ```
 
-### Create your ContentViewController
+### Create your ContentViewControllers
 
 ![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/Screenshot%20on%202013-05-09%20at%2018.17.54.png)
 
-Place your desired ViewControllers into the storyboard and connect the with a UIButton in the CustomTabBarController. Give the created segue an identifier, set the style to "custom" and to the Segue Class "MHTabBarSegue"
+Place your desired ViewControllers into the storyboard and connect them with a UIButton in the CustomTabBarController. Give the created segues identifiers matching this scheme:
+* initial, first ViewController = "viewController1"
+* second ViewController = "viewController2"
++ ...
 
-### Set the initial ContentViewController
-
-In "MHCustomTabBarController.m" set the segueIdentifier of the Segue to the ViewController which should appear after the App is started:
-
-```objective-c
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[_buttonView.subviews objectAtIndex:0]];
-    }
-}
-```
+Set the style of the segues to "custom" and the class to "MHTabBarSegue".
 
 ## License
 
