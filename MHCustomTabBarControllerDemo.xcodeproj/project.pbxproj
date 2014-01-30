@@ -150,7 +150,7 @@
 		C5E8BBE2173BA58C00F2C540 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Martin Hartl";
 			};
 			buildConfigurationList = C5E8BBE5173BA58C00F2C540 /* Build configuration list for PBXProject "MHCustomTabBarControllerDemo" */;
@@ -277,7 +277,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -315,7 +315,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -328,7 +328,7 @@
 				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -341,7 +341,7 @@
 				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

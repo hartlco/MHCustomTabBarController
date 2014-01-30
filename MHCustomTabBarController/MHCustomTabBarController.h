@@ -22,6 +22,9 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const MHCustomTabBarControllerViewControllerChangedNotification;
+extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification;
+
 @interface MHCustomTabBarController : UIViewController
 
 @property (weak,nonatomic) UIViewController *destinationViewController;

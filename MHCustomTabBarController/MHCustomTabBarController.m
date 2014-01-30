@@ -24,6 +24,9 @@
 
 #import "MHTabBarSegue.h"
 
+NSString *const MHCustomTabBarControllerViewControllerChangedNotification = @"MHCustomTabBarControllerViewControllerChangedNotification";
+NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification = @"MHCustomTabBarControllerViewControllerAlreadyVisibleNotification";
+
 @implementation MHCustomTabBarController {
     NSMutableDictionary *_viewControllersByIdentifier;
 }
@@ -72,6 +75,8 @@
     [button setSelected:YES];
     self.destinationIdentifier = segue.identifier;
     self.destinationViewController = [_viewControllersByIdentifier objectForKey:self.destinationIdentifier];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:MHCustomTabBarControllerViewControllerChangedNotification object:nil];
 
     
 }
@@ -79,6 +84,7 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([self.destinationIdentifier isEqual:identifier]) {
         //Dont perform segue, if visible ViewController is already the destination ViewController
+        [[NSNotificationCenter defaultCenter] postNotificationName:MHCustomTabBarControllerViewControllerAlreadyVisibleNotification object:nil];
         return NO;
     }
     
