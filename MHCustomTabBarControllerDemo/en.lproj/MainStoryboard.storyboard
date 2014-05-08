@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Custom Tab Bar Controller-->
+        <!--Example Custom Tab Bar View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="MHCustomTabBarController" sceneMemberID="viewController">
+                <viewController id="2" customClass="ExampleCustomTabBarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SjQ-8P-C3f"/>
                         <viewControllerLayoutGuide type="bottom" id="0nd-qY-IQ0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-xW-Dlh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="513"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </containerView>
@@ -102,7 +102,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x6w-yK-z8E" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="7d8-NL-nbN"/>
-                            <constraint firstItem="0nd-qY-IQ0" firstAttribute="top" secondItem="ODu-xW-Dlh" secondAttribute="bottom" constant="55" id="8q4-6k-osk"/>
+                            <constraint firstItem="0nd-qY-IQ0" firstAttribute="top" secondItem="ODu-xW-Dlh" secondAttribute="bottom" id="8q4-6k-osk"/>
                             <constraint firstItem="ODu-xW-Dlh" firstAttribute="leading" secondItem="x6w-yK-z8E" secondAttribute="leading" id="JA3-UA-uE3"/>
                             <constraint firstAttribute="centerX" secondItem="ODu-xW-Dlh" secondAttribute="centerX" id="JHM-2T-PvN"/>
                             <constraint firstItem="x6w-yK-z8E" firstAttribute="trailing" secondItem="ODu-xW-Dlh" secondAttribute="trailing" id="K5w-dL-LpN"/>
@@ -110,12 +110,13 @@
                             <constraint firstItem="ODu-xW-Dlh" firstAttribute="top" secondItem="3" secondAttribute="top" id="R37-QK-emF"/>
                             <constraint firstAttribute="trailing" secondItem="ODu-xW-Dlh" secondAttribute="trailing" id="U3b-gs-3Uj"/>
                             <constraint firstAttribute="trailing" secondItem="x6w-yK-z8E" secondAttribute="trailing" id="cca-zf-Fcf"/>
-                            <constraint firstItem="x6w-yK-z8E" firstAttribute="top" secondItem="ODu-xW-Dlh" secondAttribute="bottom" constant="-1" id="hfT-qO-Qi9"/>
+                            <constraint firstItem="x6w-yK-z8E" firstAttribute="top" secondItem="ODu-xW-Dlh" secondAttribute="bottom" constant="-56" id="hfT-qO-Qi9"/>
                             <constraint firstItem="ODu-xW-Dlh" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="ony-al-gFq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="container" destination="ODu-xW-Dlh" id="H3S-cg-gcf"/>
+                        <outlet property="tabBar" destination="x6w-yK-z8E" id="gP2-dc-hry"/>
                         <outletCollection property="buttons" destination="QmM-XD-9ls" id="j6p-Bx-2Ca"/>
                     </connections>
                 </viewController>
@@ -123,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="21" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller1-->
         <scene sceneID="4cX-uR-ydK">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="xXX-v0-qZJ" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="xXX-v0-qZJ" customClass="ViewController1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZIv-P6-4Ne"/>
                         <viewControllerLayoutGuide type="bottom" id="k4e-6t-gyy"/>
@@ -135,7 +136,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
-                            <userLayoutGuide location="273" affinity="minY"/>
+                            <userLayoutGuide location="268" affinity="minY"/>
                             <userLayoutGuide location="160" affinity="minX"/>
                         </userGuides>
                         <subviews>
@@ -146,6 +147,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IJ-I0-NQN">
+                                <rect key="frame" x="20" y="327" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapShowTabBar:" destination="xXX-v0-qZJ" eventType="touchUpInside" id="dxj-p0-kz5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPB-ye-reh">
+                                <rect key="frame" x="261" y="329" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapHideTapBar:" destination="xXX-v0-qZJ" eventType="touchUpInside" id="jST-oL-0GW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.47450980390000003" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

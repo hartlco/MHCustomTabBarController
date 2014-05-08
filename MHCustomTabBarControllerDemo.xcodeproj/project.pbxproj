@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5425975191B71A6005B6A05 /* ExampleCustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5425974191B71A6005B6A05 /* ExampleCustomTabBarViewController.m */; };
+		C5425978191B731E005B6A05 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = C5425977191B731E005B6A05 /* ViewController1.m */; };
 		C5E8BBEE173BA58C00F2C540 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBED173BA58C00F2C540 /* UIKit.framework */; };
 		C5E8BBF0173BA58C00F2C540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBEF173BA58C00F2C540 /* Foundation.framework */; };
 		C5E8BBF2173BA58C00F2C540 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBF1173BA58C00F2C540 /* CoreGraphics.framework */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C5425973191B71A6005B6A05 /* ExampleCustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleCustomTabBarViewController.h; sourceTree = "<group>"; };
+		C5425974191B71A6005B6A05 /* ExampleCustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleCustomTabBarViewController.m; sourceTree = "<group>"; };
+		C5425976191B731E005B6A05 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		C5425977191B731E005B6A05 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHCustomTabBarControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8BBED173BA58C00F2C540 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C5E8BBEF173BA58C00F2C540 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +96,10 @@
 		C5E8BBF3173BA58C00F2C540 /* MHCustomTabBarControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C5425973191B71A6005B6A05 /* ExampleCustomTabBarViewController.h */,
+				C5425974191B71A6005B6A05 /* ExampleCustomTabBarViewController.m */,
+				C5425976191B731E005B6A05 /* ViewController1.h */,
+				C5425977191B731E005B6A05 /* ViewController1.m */,
 				C5E8BBFC173BA58C00F2C540 /* AppDelegate.h */,
 				C5E8BBFD173BA58C00F2C540 /* AppDelegate.m */,
 				C5E8BC05173BA58C00F2C540 /* MainStoryboard.storyboard */,
@@ -209,7 +219,9 @@
 			files = (
 				C5E8BBFA173BA58C00F2C540 /* main.m in Sources */,
 				C5E8BBFE173BA58C00F2C540 /* AppDelegate.m in Sources */,
+				C5425978191B731E005B6A05 /* ViewController1.m in Sources */,
 				C5E8BC15173BA5BC00F2C540 /* MHCustomTabBarController.m in Sources */,
+				C5425975191B71A6005B6A05 /* ExampleCustomTabBarViewController.m in Sources */,
 				C5E8BC16173BA5BC00F2C540 /* MHTabBarSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
