@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D380162D-5026-43DA-B652-170E016876B5</string>
+	<string>B61F58A4-87C2-48C0-BE2E-CEF60D9E25F0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MHCustomTabBarControllerDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
