@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Custom Tab Bar Controller-->
@@ -116,7 +116,9 @@
                     </view>
                     <connections>
                         <outlet property="container" destination="ODu-xW-Dlh" id="H3S-cg-gcf"/>
-                        <outletCollection property="buttons" destination="QmM-XD-9ls" id="j6p-Bx-2Ca"/>
+                        <outletCollection property="buttons" destination="eNL-qn-pBt" id="pSJ-8j-W1j"/>
+                        <outletCollection property="buttons" destination="QmM-XD-9ls" id="Elu-V5-hZY"/>
+                        <outletCollection property="buttons" destination="FSe-ud-eyb" id="N8F-xP-i9M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
