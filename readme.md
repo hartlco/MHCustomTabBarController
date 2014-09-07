@@ -41,7 +41,7 @@ Set the style of the segues to "custom" and the class to "MHTabBarSegue".
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Martin Hartl
+Copyright (c) 2014 Martin Hartl
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
