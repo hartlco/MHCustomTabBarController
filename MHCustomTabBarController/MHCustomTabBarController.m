@@ -27,14 +27,18 @@
 NSString *const MHCustomTabBarControllerViewControllerChangedNotification = @"MHCustomTabBarControllerViewControllerChangedNotification";
 NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification = @"MHCustomTabBarControllerViewControllerAlreadyVisibleNotification";
 
-@implementation MHCustomTabBarController {
-    NSMutableDictionary *_viewControllersByIdentifier;
-}
+@interface MHCustomTabBarController ()
+
+@property (nonatomic, strong) NSMutableDictionary *viewControllersByIdentifier;
+
+@end
+
+@implementation MHCustomTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _viewControllersByIdentifier = [NSMutableDictionary dictionary];
+    self.viewControllersByIdentifier = [NSMutableDictionary dictionary];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -63,8 +67,8 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![_viewControllersByIdentifier objectForKey:segue.identifier]) {
-        [_viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
+    if (![self.viewControllersByIdentifier objectForKey:segue.identifier]) {
+        [self.viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
     }
     
     for (UIButton *aButton in self.buttons) {
@@ -74,7 +78,7 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     UIButton *button = (UIButton *)sender;
     [button setSelected:YES];
     self.destinationIdentifier = segue.identifier;
-    self.destinationViewController = [_viewControllersByIdentifier objectForKey:self.destinationIdentifier];
+    self.destinationViewController = [self.viewControllersByIdentifier objectForKey:self.destinationIdentifier];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:MHCustomTabBarControllerViewControllerChangedNotification object:nil]; 
 
@@ -94,11 +98,12 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
 #pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
-    [[_viewControllersByIdentifier allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
+    [[self.viewControllersByIdentifier allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
         if (![self.destinationIdentifier isEqualToString:key]) {
-            [_viewControllersByIdentifier removeObjectForKey:key];
+            [self.viewControllersByIdentifier removeObjectForKey:key];
         }
     }];
+    [super didReceiveMemoryWarning];
 }
 
 @end
