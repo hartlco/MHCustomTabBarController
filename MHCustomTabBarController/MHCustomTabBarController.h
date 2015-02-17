@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 Martin Hartl
+ * Copyright (c) 2015 Martin Hartl
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,6 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @interface MHCustomTabBarController : UIViewController
 
 @property (weak,nonatomic) UIViewController *destinationViewController;
-@property (strong, nonatomic) NSString *destinationIdentifier;
 @property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;

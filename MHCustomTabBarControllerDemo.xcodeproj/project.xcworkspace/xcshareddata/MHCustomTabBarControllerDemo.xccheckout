@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A84EDA195EB30C268F26DC8033C383C2BD4BBF09</key>
-		<string>ssh://github.com/mhaddl/MHCustomTabBarController.git</string>
+		<string>github.com:mhaddl/MHCustomTabBarController.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MHCustomTabBarControllerDemo.xcodeproj/project.xcworkspace</string>
+	<string>MHCustomTabBarControllerDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A84EDA195EB30C268F26DC8033C383C2BD4BBF09</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/mhaddl/MHCustomTabBarController.git</string>
+	<string>github.com:mhaddl/MHCustomTabBarController.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

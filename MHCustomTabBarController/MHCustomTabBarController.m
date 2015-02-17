@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 Martin Hartl
+ * Copyright (c) 2015 Martin Hartl
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +30,7 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
 @interface MHCustomTabBarController ()
 
 @property (nonatomic, strong) NSMutableDictionary *viewControllersByIdentifier;
+@property (strong, nonatomic) NSString *destinationIdentifier;
 
 @end
 
