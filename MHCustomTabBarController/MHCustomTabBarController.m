@@ -75,7 +75,6 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     [self.buttons setValue:@NO forKeyPath:@"selected"];
     [sender setSelected:YES];
     self.selectedIndex = [self.buttons indexOfObject:sender];
-    NSLog(@"%@",@(_selectedIndex));
 
     self.destinationIdentifier = segue.identifier;
     self.destinationViewController = [self.viewControllersByIdentifier objectForKey:self.destinationIdentifier];
