@@ -32,4 +32,6 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
+@property (assign, nonatomic) NSInteger selectedIndex;
+
 @end
