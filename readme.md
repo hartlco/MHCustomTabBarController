@@ -1,5 +1,7 @@
 # MHCustomTabBarController
 
+[![Join the chat at https://gitter.im/mhaddl/MHCustomTabBarController](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mhaddl/MHCustomTabBarController?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![](https://raw.github.com/mhaddl/MHCustomTabBarController/screenshots/screenshots/iOS%20Simulator%20Bildschirmfoto%2009.05.2013%2018.24.40.png)
 
 MHCustomTabBarController is a customizable UITabBarController replacement using Storyboard and segues. It's built with Apples Custom Container ViewController API and so requires iOS 6+.
