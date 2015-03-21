@@ -31,6 +31,7 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
 
 @property (nonatomic, strong) NSMutableDictionary *viewControllersByIdentifier;
 @property (strong, nonatomic) NSString *destinationIdentifier;
+@property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
 @end
 
