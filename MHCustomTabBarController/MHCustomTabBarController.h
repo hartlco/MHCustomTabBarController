@@ -31,4 +31,6 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
 
+@property (assign, nonatomic) NSInteger selectedIndex;
+
 @end
