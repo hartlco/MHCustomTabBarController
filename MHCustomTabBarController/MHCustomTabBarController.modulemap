@@ -1,0 +1,6 @@
+framework module MHCustomTabBarController {
+    umbrella header "MHCustomTabBarControllerUmbrellaHeader.h"
+    
+    export *
+    module * { export * }
+}
