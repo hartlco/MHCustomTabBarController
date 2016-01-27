@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64D52C9E1C526E4100386742 /* MHCustomTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D52C971C526E4100386742 /* MHCustomTabBarController.framework */; };
+		64D52C9F1C526E4100386742 /* MHCustomTabBarController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64D52C971C526E4100386742 /* MHCustomTabBarController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64D52CA91C526E6100386742 /* MHCustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BC12173BA5BC00F2C540 /* MHCustomTabBarController.m */; };
+		64D52CAA1C526E6100386742 /* MHTabBarSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E8BC13173BA5BC00F2C540 /* MHTabBarSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D52CAB1C526E6100386742 /* MHTabBarSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */; };
 		C5E8BBEE173BA58C00F2C540 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBED173BA58C00F2C540 /* UIKit.framework */; };
 		C5E8BBF0173BA58C00F2C540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBEF173BA58C00F2C540 /* Foundation.framework */; };
 		C5E8BBF2173BA58C00F2C540 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E8BBF1173BA58C00F2C540 /* CoreGraphics.framework */; };
@@ -21,7 +26,33 @@
 		C5E8BC16173BA5BC00F2C540 /* MHTabBarSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		64D52C9C1C526E4100386742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5E8BBE2173BA58C00F2C540 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64D52C961C526E4100386742;
+			remoteInfo = MHCustomTabBarController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		64D52CA31C526E4100386742 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				64D52C9F1C526E4100386742 /* MHCustomTabBarController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		64D52C971C526E4100386742 /* MHCustomTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHCustomTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D52C9B1C526E4100386742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHCustomTabBarControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E8BBED173BA58C00F2C540 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C5E8BBEF173BA58C00F2C540 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,12 +74,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		64D52C931C526E4100386742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E8BBE7173BA58C00F2C540 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C5E8BBEE173BA58C00F2C540 /* UIKit.framework in Frameworks */,
 				C5E8BBF0173BA58C00F2C540 /* Foundation.framework in Frameworks */,
+				64D52C9E1C526E4100386742 /* MHCustomTabBarController.framework in Frameworks */,
 				C5E8BBF2173BA58C00F2C540 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E8BBEA173BA58C00F2C540 /* MHCustomTabBarControllerDemo.app */,
+				64D52C971C526E4100386742 /* MHCustomTabBarController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,13 +159,43 @@
 				C5E8BC12173BA5BC00F2C540 /* MHCustomTabBarController.m */,
 				C5E8BC13173BA5BC00F2C540 /* MHTabBarSegue.h */,
 				C5E8BC14173BA5BC00F2C540 /* MHTabBarSegue.m */,
+				64D52C9B1C526E4100386742 /* Info.plist */,
 			);
 			path = MHCustomTabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		64D52C941C526E4100386742 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D52CAA1C526E6100386742 /* MHTabBarSegue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		64D52C961C526E4100386742 /* MHCustomTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D52CA21C526E4100386742 /* Build configuration list for PBXNativeTarget "MHCustomTabBarController" */;
+			buildPhases = (
+				64D52C921C526E4100386742 /* Sources */,
+				64D52C931C526E4100386742 /* Frameworks */,
+				64D52C941C526E4100386742 /* Headers */,
+				64D52C951C526E4100386742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MHCustomTabBarController;
+			productName = MHCustomTabBarController;
+			productReference = 64D52C971C526E4100386742 /* MHCustomTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C5E8BBE9173BA58C00F2C540 /* MHCustomTabBarControllerDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5E8BC0D173BA58D00F2C540 /* Build configuration list for PBXNativeTarget "MHCustomTabBarControllerDemo" */;
@@ -134,10 +204,12 @@
 				C5E8BBE7173BA58C00F2C540 /* Frameworks */,
 				C5E8BBE8173BA58C00F2C540 /* Resources */,
 				72854395B7204ECFB9ED468D /* Warn for TODO and FIXME comments */,
+				64D52CA31C526E4100386742 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				64D52C9D1C526E4100386742 /* PBXTargetDependency */,
 			);
 			name = MHCustomTabBarControllerDemo;
 			productName = MHCustomTabBarControllerDemo;
@@ -150,8 +222,13 @@
 		C5E8BBE2173BA58C00F2C540 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Martin Hartl";
+				TargetAttributes = {
+					64D52C961C526E4100386742 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
 			};
 			buildConfigurationList = C5E8BBE5173BA58C00F2C540 /* Build configuration list for PBXProject "MHCustomTabBarControllerDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -166,11 +243,19 @@
 			projectRoot = "";
 			targets = (
 				C5E8BBE9173BA58C00F2C540 /* MHCustomTabBarControllerDemo */,
+				64D52C961C526E4100386742 /* MHCustomTabBarController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		64D52C951C526E4100386742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E8BBE8173BA58C00F2C540 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +288,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		64D52C921C526E4100386742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D52CAB1C526E6100386742 /* MHTabBarSegue.m in Sources */,
+				64D52CA91C526E6100386742 /* MHCustomTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5E8BBE6173BA58C00F2C540 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +309,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64D52C9D1C526E4100386742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64D52C961C526E4100386742 /* MHCustomTabBarController */;
+			targetProxy = 64D52C9C1C526E4100386742 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C5E8BBF6173BA58C00F2C540 /* InfoPlist.strings */ = {
@@ -236,6 +338,73 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		64D52CA01C526E4100386742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MHCustomTabBarController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mhaddl.MHCustomTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64D52CA11C526E4100386742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MHCustomTabBarController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mhaddl.MHCustomTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C5E8BC0B173BA58D00F2C540 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -250,6 +419,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -327,6 +497,8 @@
 				GCC_PREFIX_HEADER = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mhaddl.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
@@ -340,6 +512,8 @@
 				GCC_PREFIX_HEADER = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Prefix.pch";
 				INFOPLIST_FILE = "MHCustomTabBarControllerDemo/MHCustomTabBarControllerDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mhaddl.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
@@ -349,6 +523,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		64D52CA21C526E4100386742 /* Build configuration list for PBXNativeTarget "MHCustomTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D52CA01C526E4100386742 /* Debug */,
+				64D52CA11C526E4100386742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5E8BBE5173BA58C00F2C540 /* Build configuration list for PBXProject "MHCustomTabBarControllerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
