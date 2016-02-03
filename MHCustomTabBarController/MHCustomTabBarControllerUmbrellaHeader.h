@@ -17,5 +17,5 @@ FOUNDATION_EXPORT const unsigned char TestVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Test/PublicHeader.h>
 
 
-#import <MHCustomTabbarController/MHCustomTabBarController.h>
-#import <MHCustomTabbarController/MHTabBarSegue.h>
+#import "MHCustomTabbarController/MHCustomTabBarController.h"
+#import "MHTabBarSegue.h"
