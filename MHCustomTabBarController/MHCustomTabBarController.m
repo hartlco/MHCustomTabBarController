@@ -43,7 +43,7 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     self.viewControllersByIdentifier = [NSMutableDictionary dictionary];
 }
 
--(void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     if (self.childViewControllers.count < 1) {
@@ -55,11 +55,8 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     self.destinationViewController.view.frame = self.container.bounds;
 }
 
-
-
 #pragma mark - Segue
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
    
     if (![segue isKindOfClass:[MHTabBarSegue class]]) {
         [super prepareForSegue:segue sender:sender];
@@ -81,8 +78,6 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     self.destinationViewController = [self.viewControllersByIdentifier objectForKey:self.destinationIdentifier];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:MHCustomTabBarControllerViewControllerChangedNotification object:nil]; 
-
-    
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
@@ -96,13 +91,13 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
 }
 
 #pragma mark - Memory Warning
-
 - (void)didReceiveMemoryWarning {
     [[self.viewControllersByIdentifier allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
         if (![self.destinationIdentifier isEqualToString:key]) {
             [self.viewControllersByIdentifier removeObjectForKey:key];
         }
     }];
+    
     [super didReceiveMemoryWarning];
 }
 
