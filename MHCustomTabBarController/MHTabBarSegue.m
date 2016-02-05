@@ -24,7 +24,7 @@
 #import "MHCustomTabBarController.h"
 
 @implementation MHTabBarSegue
-- (void) perform {
+- (void)perform {
     MHCustomTabBarController *tabBarViewController = (MHCustomTabBarController *)self.sourceViewController;
     UIViewController *destinationViewController = (UIViewController *) tabBarViewController.destinationViewController;
 
