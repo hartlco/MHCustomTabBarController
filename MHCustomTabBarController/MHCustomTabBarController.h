@@ -30,6 +30,7 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @property (weak,nonatomic) UIViewController *destinationViewController;
 @property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
+@property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
 @property (assign, nonatomic) NSInteger selectedIndex;
 
