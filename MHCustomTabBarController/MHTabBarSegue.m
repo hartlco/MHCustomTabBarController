@@ -46,9 +46,19 @@
         [tabBarViewController.oldViewController removeFromParentViewController];
     }
     
-    destinationViewController.view.frame = tabBarViewController.container.bounds;
     [tabBarViewController addChildViewController:destinationViewController];
-    [tabBarViewController.container addSubview:destinationViewController.view];
+
+    UIView *view = destinationViewController.view;
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+
+    UIView *container = tabBarViewController.container;
+    [container addSubview:view];
+
+    [view.leadingAnchor constraintEqualToAnchor:container.leadingAnchor].active = YES;
+    [view.trailingAnchor constraintEqualToAnchor:container.trailingAnchor].active = YES;
+    [view.topAnchor constraintEqualToAnchor:container.topAnchor].active = YES;
+    [view.bottomAnchor constraintEqualToAnchor:container.bottomAnchor].active = YES;
+
     [destinationViewController didMoveToParentViewController:tabBarViewController];
 }
 
