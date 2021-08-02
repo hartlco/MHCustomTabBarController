@@ -40,13 +40,18 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     [super viewDidLoad];
     
     self.viewControllersByIdentifier = [NSMutableDictionary dictionary];
+    self.replaceOldViewController = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    assert(self.buttons || self.segmentedControl);
+    
+    id sender = (self.buttons) ? self.buttons[0] : self.segmentedControl;
+    
     if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[self.buttons objectAtIndex:0]];
+        [self performSegueWithIdentifier:@"viewController1" sender:sender];
     }
 }
 
@@ -61,20 +66,36 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
         [super prepareForSegue:segue sender:sender];
         return;
     }
+
+    ((MHTabBarSegue *)segue).replaceOldViewController = self.replaceOldViewController;
     
     self.oldViewController = self.destinationViewController;
     
     //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![self.viewControllersByIdentifier objectForKey:segue.identifier]) {
-        [self.viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
+    if (!self.viewControllersByIdentifier[segue.identifier]) {
+        self.viewControllersByIdentifier[segue.identifier] = segue.destinationViewController;
     }
     
-    [self.buttons setValue:@NO forKeyPath:@"selected"];
-    [sender setSelected:YES];
-    self.selectedIndex = [self.buttons indexOfObject:sender];
+    assert(self.buttons || self.segmentedControl);
+    
+    if (self.buttons) {
+        for (UIButton *btn in self.buttons) {
+            if (self.keepSelection) {
+                continue;
+            }
+
+            btn.selected = NO;
+        }
+
+        [sender setSelected:YES];
+        self.selectedIndex = [self.buttons indexOfObject:sender];
+    } else {
+        [sender setSelected:YES];
+        self.selectedIndex = self.segmentedControl.selectedSegmentIndex;
+    }
 
     self.destinationIdentifier = segue.identifier;
-    self.destinationViewController = [self.viewControllersByIdentifier objectForKey:self.destinationIdentifier];
+    self.destinationViewController = self.viewControllersByIdentifier[self.destinationIdentifier];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:MHCustomTabBarControllerViewControllerChangedNotification object:nil]; 
 }

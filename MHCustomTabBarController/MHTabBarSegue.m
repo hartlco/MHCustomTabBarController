@@ -25,12 +25,22 @@
 
 @implementation MHTabBarSegue
 
+- (instancetype)initWithIdentifier:(nullable NSString *)identifier
+                            source:(UIViewController *)source
+                       destination:(UIViewController *)destination
+{
+    if ((self = [super initWithIdentifier:identifier source:source destination:destination])) {
+        self.replaceOldViewController = YES;
+    }
+    return self;
+}
+
 - (void)perform {
     MHCustomTabBarController *tabBarViewController = (MHCustomTabBarController *)self.sourceViewController;
     UIViewController *destinationViewController = (UIViewController *)tabBarViewController.destinationViewController;
 
     //remove old viewController
-    if (tabBarViewController.oldViewController) {
+    if (tabBarViewController.oldViewController && self.replaceOldViewController) {
         [tabBarViewController.oldViewController willMoveToParentViewController:nil];
         [tabBarViewController.oldViewController.view removeFromSuperview];
         [tabBarViewController.oldViewController removeFromParentViewController];

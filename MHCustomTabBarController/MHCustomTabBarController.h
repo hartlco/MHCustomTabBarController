@@ -31,7 +31,15 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @property (strong, nonatomic) UIViewController *oldViewController;
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (assign, nonatomic) NSInteger selectedIndex;
+/// do not clear previous selection
+@property (assign, nonatomic) BOOL keepSelection;
+/**
+ * Replace old view controller with new one.
+ * self.childViewControllers will contain only one (current) view controller in this case
+ */
+@property (nonatomic) BOOL replaceOldViewController;
 
 @end
