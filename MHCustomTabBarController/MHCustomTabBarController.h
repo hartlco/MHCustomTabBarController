@@ -35,11 +35,15 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 
 @property (assign, nonatomic) NSInteger selectedIndex;
 /// do not clear previous selection
-@property (assign, nonatomic) BOOL keepSelection;
+@property (assign, nonatomic) BOOL keepsSelection;
 /**
  * Replace old view controller with new one.
  * self.childViewControllers will contain only one (current) view controller in this case
  */
-@property (nonatomic) BOOL replaceOldViewController;
+@property (nonatomic) BOOL replacesOldViewController;
+/**
+ * Defaults to YES, If NO behave as ordinary view controller (not using custom segues logic)
+ */
+@property (nonatomic) BOOL usesTabs;
 
 @end

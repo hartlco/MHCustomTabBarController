@@ -24,6 +24,6 @@
 
 @interface MHTabBarSegue : UIStoryboardSegue
 
-@property (nonatomic) BOOL replaceOldViewController;
+@property (nonatomic) BOOL replacesOldViewController;
 
 @end

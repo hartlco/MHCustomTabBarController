@@ -30,17 +30,17 @@
                        destination:(UIViewController *)destination
 {
     if ((self = [super initWithIdentifier:identifier source:source destination:destination])) {
-        self.replaceOldViewController = YES;
+        self.replacesOldViewController = YES;
     }
     return self;
 }
 
 - (void)perform {
     MHCustomTabBarController *tabBarViewController = (MHCustomTabBarController *)self.sourceViewController;
-    UIViewController *destinationViewController = (UIViewController *)tabBarViewController.destinationViewController;
+    UIViewController *destinationViewController = tabBarViewController.destinationViewController;
 
     //remove old viewController
-    if (tabBarViewController.oldViewController && self.replaceOldViewController) {
+    if (tabBarViewController.oldViewController && self.replacesOldViewController) {
         [tabBarViewController.oldViewController willMoveToParentViewController:nil];
         [tabBarViewController.oldViewController.view removeFromSuperview];
         [tabBarViewController.oldViewController removeFromParentViewController];
