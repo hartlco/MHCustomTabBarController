@@ -27,12 +27,16 @@
 NSString *const MHCustomTabBarControllerViewControllerChangedNotification = @"MHCustomTabBarControllerViewControllerChangedNotification";
 NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification = @"MHCustomTabBarControllerViewControllerAlreadyVisibleNotification";
 
+NSString *const kDefaultSegueIdentifier = @"viewController1";
+
+
 @interface MHCustomTabBarController ()
 
 @property (nonatomic, strong) NSMutableDictionary *viewControllersByIdentifier;
 @property (strong, nonatomic) NSString *destinationIdentifier;
 
 @end
+
 
 @implementation MHCustomTabBarController
 
@@ -52,11 +56,23 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
     }
     
     assert(self.buttons || self.segmentedControl);
-    
-    id sender = (self.buttons) ? self.buttons[0] : self.segmentedControl;
+
+    id sender;
+
+    if (self.buttons) {
+        sender = self.initialSelectedButton
+            ? self.initialSelectedButton
+            : self.buttons.firstObject;
+    } else {
+        sender = self.segmentedControl;
+    }
+
+    if (!self.initialSegueIdentifier) {
+        self.initialSegueIdentifier = kDefaultSegueIdentifier;
+    }
     
     if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:sender];
+        [self performSegueWithIdentifier:self.initialSegueIdentifier sender:sender];
     }
 }
 
@@ -93,10 +109,10 @@ NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotification
         }
 
         [sender setSelected:YES];
-        self.selectedIndex = [self.buttons indexOfObject:sender];
+        _selectedIndex = [self.buttons indexOfObject:sender];
     } else {
         [sender setSelected:YES];
-        self.selectedIndex = self.segmentedControl.selectedSegmentIndex;
+        _selectedIndex = self.segmentedControl.selectedSegmentIndex;
     }
 
     self.destinationIdentifier = segue.identifier;

@@ -33,9 +33,21 @@ extern NSString *const MHCustomTabBarControllerViewControllerAlreadyVisibleNotif
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
-@property (assign, nonatomic) NSInteger selectedIndex;
-/// do not clear previous selection
-@property (assign, nonatomic) BOOL keepsSelection;
+@property (nonatomic, readonly) NSInteger selectedIndex;
+/**
+ * Button to be selected initially,
+ * set it in subclass before [super viewWillAppear:] call
+ */
+@property (nonatomic) UIButton *initialSelectedButton;
+/**
+ * Segue identifier for view controller that should be opened initially,
+ * set it in subclass before [super viewWillAppear:] call
+ */
+@property (nonatomic) NSString *initialSegueIdentifier;
+/**
+ * Do not clear previous selection
+ */
+@property (nonatomic) BOOL keepsSelection;
 /**
  * Replace old view controller with new one.
  * self.childViewControllers will contain only one (current) view controller in this case
