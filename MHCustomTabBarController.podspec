@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     'Martin Hartl' => 'martin@mhaddl.me'
   }
   s.source = {
-    :git => 'https://github.com/schmidt9/MHCustomTabBarController.git,
+    :git => 'https://github.com/schmidt9/MHCustomTabBarController.git',
     :tag => 'v1.3.0'
   }
   s.source_files = 'MHCustomTabBarController/*.{m,h}'
